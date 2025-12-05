@@ -1,0 +1,83 @@
+.user-form {
+	display: flex;
+	justify-content: center;
+	padding: 2rem 1rem;
+
+	&__card {
+		width: 100%;
+		max-width: 32rem;
+		background: #fff;
+		border-radius: 12px;
+		box-shadow: rgba(0, 0, 0, 0.06) 0 6px 20px;
+		padding: 1.5rem;
+	}
+
+	&__title {
+		margin: 0 0 1rem;
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: #333;
+		text-align: center;
+	}
+
+	&__field {
+		margin-bottom: 1rem;
+	}
+
+	&__label {
+		display: block;
+		margin-bottom: 0.25rem;
+		font-weight: 500;
+		color: #333;
+	}
+
+	&__input {
+		width: 100%;
+		padding: 10px 12px;
+		border: 1px solid #ddd;
+		border-radius: 6px;
+		font-size: 1rem;
+
+		&.is-invalid {
+			border-color: #ff4757;
+			box-shadow: 0 0 0 2px rgba(255, 71, 87, 0.15);
+		}
+	}
+
+	&__error {
+		margin-top: 0.25rem;
+		color: #ff4757;
+		font-size: 0.875rem;
+	}
+
+	&__note {
+		margin: 0.5rem 0 1rem;
+		color: #666;
+		font-size: 0.95rem;
+		text-align: center;
+	}
+
+	&__submit {
+		width: 100%;
+		padding: 10px 14px;
+		background: #02b3e4;
+		color: #fff;
+		border: none;
+		border-radius: 6px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: background-color 0.2s ease;
+
+		&:hover {
+			background: #0298c7;
+		}
+
+		&:disabled {
+			background: #cfd8dc;
+			color: #7a8a94;
+			cursor: not-allowed;
+			box-shadow: none;
+			opacity: 0.8;
+		}
+	}
+}

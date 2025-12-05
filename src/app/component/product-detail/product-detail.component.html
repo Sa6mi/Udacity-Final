@@ -1,0 +1,36 @@
+<div class="product-detail">
+    <img 
+        class="product-detail__image" 
+        [src]="product?.url" 
+        [alt]="product?.name"
+        loading="lazy" />
+    <div class="product-detail__info">
+        <h2 class="product-detail__title">{{ product?.name }}</h2>
+        <p class="product-detail__description">{{ product?.description }}</p>
+        <p class="product-detail__price">{{ product?.price | currency:'ILS' }}</p>
+
+        <form class="product-detail__form" (ngSubmit)="addProductToCart(product)">
+            <label for="quantity" class="product-detail__label">Qty:</label>
+            <select 
+                id="quantity"
+                name="quantity"
+                [(ngModel)]="Quantity" 
+                class="product-detail__quantity form-select" 
+                (ngModelChange)="onSelectQuantityChange($event)" 
+                [ngModelOptions]="{ standalone: true }">
+                <option *ngFor="let value of quantityOptions" [value]="value">
+                    {{ value }}
+                </option>
+            </select>
+
+            <input 
+                class="product-detail__submit" 
+                type="submit" 
+                value="Add to Cart" />
+        </form>
+
+        <div>
+            <a class="product-detail__back" routerLink="/">&lt; Back to product list</a>
+        </div>
+    </div>
+</div>

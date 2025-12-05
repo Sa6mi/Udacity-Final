@@ -1,0 +1,38 @@
+<div class="product-card">
+  <a [routerLink]="'/product/' + productItem.id" routerLinkActive="active">
+    <img 
+      class="product-card__image" 
+      [src]="productItem.url" 
+      [alt]="productItem.name"
+      loading="lazy" />
+  </a>
+  
+  <div class="product-card__detail">
+    <b>{{ productItem.name }}</b>
+  </div>
+  
+  <div class="product-card__detail">
+    {{ productItem.price | currency:'ILS' }}
+  </div>
+  
+  <form (ngSubmit)="addProductToCart(productItem)">
+    <select 
+      [(ngModel)]="Quantity" 
+      class="product-card__quantity form-select" 
+      (ngModelChange)="onSelectQuantityChange($event)" 
+      [ngModelOptions]="{ standalone: true }"
+      name="quantity">
+      <option 
+        *ngFor="let value of quantityOptions" 
+        [value]="value">
+        {{ value }}
+      </option>
+    </select>
+    
+    <input 
+      class="product-card__submit" 
+      type="submit" 
+      value="Add to Cart" 
+      [disabled]="!productItem" />
+  </form>
+</div>

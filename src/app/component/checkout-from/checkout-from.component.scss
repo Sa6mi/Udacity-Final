@@ -1,0 +1,56 @@
+.confirmation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+
+    &__card {
+        width: 100%;
+        max-width: 32rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.06) 0 6px 20px;
+        padding: 2rem 1.5rem;
+    }
+
+    &__title {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #33e5bc;
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    &__row {
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
+        color: #333;
+        text-align: center;
+    }
+
+    &__note {
+        color: #666;
+        font-size: 0.95rem;
+        margin-top: 0.25rem;
+    }
+
+    &__actions {
+        margin-top: 1rem;
+    }
+
+    &__link {
+        color: #02b3e4;
+        text-decoration: none;
+        border-bottom: 1px dashed rgba(2, 179, 228, 0.5);
+        padding-bottom: 2px;
+
+        &:hover {
+            border-bottom-color: #02b3e4;
+        }
+    }
+}

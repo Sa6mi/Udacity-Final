@@ -1,0 +1,99 @@
+.product-detail {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+
+    &__image {
+        width: 100%;
+        max-width: 24rem;
+        height: auto;
+        border-radius: 10px;
+        margin-top: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 24px;
+        object-fit: cover;
+        display: block;
+    }
+
+    &__info {
+        flex: 1;
+        max-width: 40rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    &__title {
+        margin: 0 0 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    &__description {
+        color: #555;
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
+    }
+
+    &__price {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #02b3e4;
+        margin-bottom: 1rem;
+    }
+
+    &__form {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        width: auto;
+    }
+
+    &__label {
+        font-weight: 500;
+        color: #333;
+    }
+
+    &__quantity {
+        width: 6rem;
+        min-width: 6rem;
+        max-width: 8rem;
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        background: #fff;
+        display: inline-block;
+    }
+
+    &__submit {
+        padding: 10px 16px;
+        background: #02b3e4;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        display: inline-block;
+
+        &:hover {
+            background: #0298c7;
+        }
+    }
+
+    &__back {
+        display: inline-block;
+        color: #555;
+        text-decoration: none;
+        border-bottom: 1px dashed #aaa;
+        padding-bottom: 2px;
+        margin-top: 0.75rem;
+
+        &:hover {
+            color: #000;
+            border-bottom-color: #777;
+        }
+    }
+}

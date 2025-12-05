@@ -1,0 +1,23 @@
+<div class="confirmation" role="status" aria-live="polite">
+    <div class="confirmation__card">
+        <div class="confirmation__title">
+            <span>Order Confirmed</span>
+        </div>
+
+        <div class="confirmation__row">
+            Thank you, <b>{{ firstName }}</b>
+        </div>
+
+        <div class="confirmation__row">
+            Total: <b>{{ totalPrice | currency:'ILS' }}</b>
+        </div>
+
+        <div class="confirmation__row confirmation__note">
+            Please allow 1–3 business day(s) for shipping.
+        </div>
+
+        <div class="confirmation__actions">
+            <a routerLink="/" class="confirmation__link">&larr; Back to products</a>
+        </div>
+    </div>
+</div>

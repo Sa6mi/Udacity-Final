@@ -1,0 +1,13 @@
+<header class="header">
+    <div class="header__inner">
+        <div class="header__title">{{ pageTitle }}</div>
+        <nav class="header__menu">
+            <a routerLink="/" class="header__link">Product List</a>
+            <a routerLink="cart" class="header__link header__cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="header__cart-label">Cart</span>
+                <span id="cartAmount" class="header__badge" aria-label="Items in cart">0</span>
+            </a>
+        </nav>
+    </div>
+</header>
